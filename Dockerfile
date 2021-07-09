@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:alpine
 RUN pip install gunicorn flask
 ADD mainapp.py wsgi.py /app/
 EXPOSE 5000
