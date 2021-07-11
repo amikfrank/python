@@ -16,7 +16,7 @@ spec:
       - name: webapp1
         image: amikacr.azurecr.io/python-test:latest
         ports:
-        - containerPort: 80
+        - containerPort: 5000
 ---
 kind: Service
 apiVersion: v1
@@ -27,4 +27,5 @@ spec:
     app: webapp1
   ports:
   - port: 80
+  - targetPort: 5000
   type: LoadBalancer # LoadBalancer # NodePort # 
