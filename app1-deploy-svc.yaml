@@ -15,6 +15,7 @@ spec:
       containers:
       - name: webapp1
         image: amikacr.azurecr.io/python-test:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
 ---
